@@ -7,8 +7,8 @@ README = (HERE / "README.md").read_text()
 
 setup(
     name="precise",
-    version="0.11.18",
-    description="Online covariance, precision, portfolios and ensembles",
+    version="0.15.0",
+    description="The home of Schur Hierarchical Portfolios: an aesthetically pleasing version of Hierarchical Risk Parity",
     long_description=README,
     long_description_content_type="text/markdown",
     url="https://github.com/microprediction/precise",
@@ -38,6 +38,9 @@ setup(
               "precise.skatertools.m6",
               "precise.skatertools.syntheticdata",
               "precise.skatervaluation",
+              "precise.skatervaluation.covariancecomparisonutil",
+              "precise.skatervaluation.managercomparisonutil",
+              "precise.skatervaluation.portfoliocomparisonutil",
               "precise.skatervaluation.queues",
               "precise.skatervaluation.battleutil",
               "precise.skatervaluation.schurcomparisionutil",
@@ -51,11 +54,11 @@ setup(
               'precise.skatervaluation.battlescripts.manager_var'
               ],
     test_suite='pytest',
-    tests_require=['pytest'],
+    tests_require=['pytest','riskparityportfolio'],
     include_package_data=True,
-    install_requires=['numpy','momentum>=0.2.7','kmeans1d','runthis','scikit-learn','latextable','tomark',
+    install_requires=['numpy','momentum>=0.2.7','kmeans1d','scikit-learn','latextable','tomark',
                       'pandas_datareader','pandas','scipy>=1.7.3','pyportfolioopt','collinearity',
-                      'riskparityportfolio'],
+                      'yfinance'],
     entry_points={
         "console_scripts": [
             "precise=precise.__main__:main",

@@ -1,3 +1,151 @@
+In no particular order. The scope is robust diversified portfolios and things that help. To add to this list or correct an entry, ideally:
+
+   1. Fork the repo (top right)
+   2. Edit this file. 
+   3. Submit a pull request (also possible with a click or two).
+  
+Or file an [issue](https://github.com/microprediction/precise/issues).  
+
+
+## A Consistently oriented basis for eigenanalysis: improved directional statistics [link](https://link.springer.com/article/10.1007/s41060-024-00570-5)
+Jay Damask
+
+The algorithm derived in this article, which builds upon the original paper, takes a holistic view of the handedness of an orthonormal eigenvector matrix so as to transfer what would have been labeled as a reflection in the original algorithm into a rotation through a major arc in the new algorithm. In so doing, the angular wrap-around on the interval 
+ that exists in the original is extended to a 
+ interval for primary rotations, which in turn provides clean directional statistics. The modified algorithm is detailed in this article and an empirical example is shown. The empirical example is analyzed in the context of random matrix theory, after which two methods are discussed to stabilize eigenvector pointing directions as they evolve in time. The thucyd Python package and source code, reported in the original paper, has been updated to include the new algorithm and is freely available.
+
+## The Economic Value of MSE [link](https://www.researchgate.net/publication/381196782_The_Economic_Value_of_Mean_Squared_Error_Evidence_from_Portfolio_Selection)
+Zhaokun Cai et al
+
+When designing and evaluating estimators, the mean squared error (MSE) is the most commonly
+used generic statistical loss function because it captures the bias-variance tradeoff and allows
+easy analytical and numerical treatment. However, MSE estimators are often applied to decision
+problems for which the loss function is different, raising questions about how much value there
+is in using a generic statistical loss function like the MSE rather than a decision loss function.
+We elucidate this question through the lens of the portfolio selection problem by showing that
+for several important portfolio rules, there is a positive linear relation between the MSE and
+a portfolio-decision loss function. Moreover, shrinkage portfolio estimators derived under these
+two loss functions are typically close to each other. Our findings highlight the economic value
+of MSE to serve as a general-purpose statistical loss function in portfolio selection.
+
+
+
+## Improved Portfolio Diversification Through Unsupervised Learning [SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4580833)
+Michael J. Lewis
+
+From a theoretical perspective, portfolio optimization has been well understood for quite some time; Markowitz’ Critical Line Method stems from 1956, for example. In practice, the covariance matrix for portfolio returns is known to be noisy and frequently ill-conditioned, making the necessary inversion of the matrix impractical and inaccurate.
+
+The approach of shrinking the covariance matrix in practice solves the inversion issue, but in doing so modifies the relationships between stocks, throwing the baby out with the bathwater. Hierarchical Risk Parity (HRP) took a novel approach to leverage these relationships, and in doing so sidestep the issue of inversion, but limited its scope to sorting the indices. We build upon this philosophy, introducing Recursive Clustering Risk Parity (RCRP). This procedure takes advantage of advances in unsupervised learning and inverse approximations to adhere more completely to these stock relationships by building and leveraging the corresponding tree structure to sidestep inversion, reduce noise impact, and in doing so enhance portfolio performance.
+
+## Portfolio Optimization with Tracking-Error Constraints [pdf](https://merage.uci.edu/~jorion/papers/optim.pdf)
+Philippe Jorion
+
+This article explores the risk and return relationship of active portfolios subject to a constraint on tracking-error volatility (TEV), which can also be interpreted in terms of value at risk. Such a constrained portfolio is the typical setup for active managers who are given the task of beating a benchmark. The problem with this setup is that the portfolio manager pays no attention to total portfolio risk, which results in seriously inefficient portfolios unless some additional constraints are imposed. The development in this article shows that TEV-constrained portfolios are described by an ellipse on the traditional mean–variance plane. This finding yields a number of new insights. Because of the flat shape of this ellipse, adding a constraint on total portfolio volatility can substantially improve the performance of the active portfolio. In general, plan sponsors should concentrate on controlling total portfolio risk.
+
+## Machine Learning Risk Models [ssrn](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3308964)
+Zura Kakushadze and Willie Yu
+
+We give an explicit algorithm and source code for constructing risk models based on machine learning techniques. The resultant covariance matrices are not factor models. Based on empirical backtests, we compare the performance of these machine learning risk models to other constructions, including statistical risk models, risk models based on fundamental industry classifications, and also those utilizing multilevel clustering based industry classifications.
+
+
+## Dictionary Learning-Based Denoising for Portfolio [pdf](https://2023.ic-dsp.org/wp-content/uploads/2023/05/DSP2023-43.pdf)
+Sadik, Et-tolba, Nsiri
+
+In the finance industry, real-world data are affected
+by noise, which comes from several external sources. This makes
+it challenging to select optimal portfolios for profitable investment
+strategies. Therefore, noise removal (or denoising) has become
+important for investors to create accurate investment models
+that guarantee better returns. In this paper, we propose a novel
+dictionary learning-based denoising approach for financial time
+series. The transform matrix in dictionary learning is built by
+training the noisy data with a K-singular value decomposition (KSVD) algorithm. We evaluated the effectiveness of the proposed
+method using the 30 Fama French portfolio (FF30) as sample
+data. Furthermore, the out-of-sample performance of the denoising approach is tested under a minimum-variance framework.
+Empirical results prove that the proposed dictionary learningbased denoising method outperforms the other benchmarks in
+terms of portfolio selection
+
+
+## Regularized Tyler’s Scatter Estimator: Existence, Uniqueness, and Algorithms [pdf](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=6879466)
+Ying Sun and Daniel P. Palomar
+
+This paper considers the regularized Tyler’s scatter
+estimator for elliptical distributions, which has received considerable attention recently. Various types of shrinkage Tyler’s estimators have been proposed in the literature and proved work effectively in the “large small ” scenario. Nevertheless, the existence
+and uniqueness properties of the estimators are not thoroughly
+studied, and in certain cases the algorithms may fail to converge.
+In this work, we provide a general result that analyzes the sufficient condition for the existence of a family of shrinkage Tyler’s
+estimators, which quantitatively shows that regularization indeed
+reduces the number of required samples for estimation and the
+convergence of the algorithms for the estimators. For two specific
+shrinkage Tyler’s estimators, we also proved that the condition is
+necessary and the estimator is unique. Finally, we show that the
+two estimators are actually equivalent. Numerical algorithms are
+also derived based on the majorization-minimization framework,
+under which the convergence is analyzed systematically.
+
+
+## James–Stein for the leading eigenvector [pdf](https://www.pnas.org/doi/epdf/10.1073/pnas.2207046120)
+Lisa Goldberg and Alec Kercheval
+
+Recent research identifies and corrects bias, such as excess dispersion, in the leadingsample eigenvector of a factor-based covariance  matrix estimated  from  a high-dimension low sample size (HL) data set. We show that eigenvector bias can have asubstantial impact on variance-minimizing optimization in the HL regime, while bias in estimated eigenvalues may have little effect. We describe a data-driven eigenvector shrinkage estimator in the HL regime called “James–Stein for eigenvectors” (JSE) andits close relationship with the James–Stein (JS) estimator for a collection of averages.We show, both theoretically and with numerical experiments, that, for certain variance-minimizing problems of practical importance, efforts to correct eigenvalues have little value in comparison to the JSE correction of the leading eigenvector. When certain extra information is present, JSE is a consistent estimator of the leading eigenvector
+
+
+##  Rotational invariant estimator for general noisy matrices [pdf](https://arxiv.org/pdf/1502.06736.pdf) [code](https://github.com/GGiecold/pyRMT/blob/main/pyRMT.py)
+Joël Bun, Romain Allez, Jean-Philippe Bouchaud, Marc Potters
+
+We investigate the problem of estimating a given real symmetric signal matrix C from a noisy observation matrix M in the limit of large dimension. We consider the case where the noisy measurement M comes either from an arbitrary additive or multiplicative rotational invariant perturbation. We establish, using the Replica method, the asymptotic global law estimate for three general classes of noisy matrices, significantly extending previously obtained results. We give exact results concerning the asymptotic deviations (called overlaps) of the perturbed eigenvectors away from the true ones, and we explain how to use these overlaps to "clean" the noisy eigenvalues of M. We provide some numerical checks for the different estimators proposed in this paper and we also make the connection with some well known results of Bayesian statistics
+
+
+## Estimating covariance matrices for portfolio optimization [pdf](http://www.gcoqueret.com/files/Estim_cov.pdf)
+GUILLAUME COQUERET AND VINCENT MILHAU
+
+We compare twelve estimators of the covariance matrix: the sample covariance matrix, the identity
+matrix, the constant-correlation estimator, three estimators derived from an explicit factor model, three obtained
+from an implicit factor model, and three shrunk estimators. Following the literature, we conduct the comparison
+by computing the volatility of estimated Minimum Variance portfolios. We do this in two frameworks: first, an
+ideal situation where the true covariance matrix would be known, and second, a real-world situation where it
+is unknown. In each of these two cases, we perform the tests with and without short-sales constraints, and we
+assess the impact of the universe and sample sizes on the results. Our findings are in line with those of Ledoit
+and Wolf (2003), in that we confirm that in the absence of short-sales constraints, shrunk estimators lead in
+general to the lowest volatilities. With long-only constraints, however, their performance is similar to that of
+principal component estimators. Moreover, the latter estimators tend to imply lower levels of turnover, which
+is an important practical consideration.
+
+
+## A Modified CTGAN-Plus-Features Based Method for Optimal Asset Allocation [pdf](https://arxiv.org/pdf/2302.02269)
+José-Manuel Peña, Fernando Suárez, Omar Larré, Domingo Ramírez, Arturo Cifuentes
+
+We propose a new approach to portfolio optimization that utilizes a unique combination of synthetic data generation and a CVaR-constraint. We formulate the portfolio optimization problem as an asset allocation problem in which each asset class is accessed through a passive (index) fund. The asset-class weights are determined by solving an optimization problem which includes a CVaR-constraint. The optimization is carried out by means of a Modified CTGAN algorithm which incorporates features (contextual information) and is used to generate synthetic return scenarios, which, in turn, are fed into the optimization engine. For contextual information we rely on several points along the U.S. Treasury yield curve. The merits of this approach are demonstrated with an example based on ten asset classes (covering stocks, bonds, and commodities) over a fourteen-and-half year period (January 2008-June 2022). We also show that the synthetic generation process is able to capture well the key characteristics of the original data, and the optimization scheme results in portfolios that exhibit satisfactory out-of-sample performance. We also show that this approach outperforms the conventional equal-weights (1/N) asset allocation strategy and other optimization formulations based on historical data only.
+
+## Cross Asset Portfolios of Tradable Risk Premia Indices - Hierarchical Risk Parity - Enhancing Returns [link](https://www.scribd.com/document/466110701/Cross-Asset-Portfolios-of-Tradable-Risk-Premia-Indices-Hierarchical-Risk-Parity-Enhancing-Returns-pdf#)
+
+
+## Adaptive Seriational Risk Parity and Other Extensions for Heuristic Portfolio Construction Using Machine Learning and Graph Theory [pdf](https://jfds.pm-research.com/content/iijjfds/early/2021/10/06/jfds.2021.1.078.full-text.pdf)
+Peter Schwendner, Jochen Papenbrock, Markus Jaeger and Stephan Krügel
+
+In this article, the authors present a conceptual framework named adaptive seriational risk parity (ASRP) to extend hierarchical risk parity (HRP) as an asset allocation heuristic. The first step of HRP (quasi-diagonalization), determining the hierarchy of assets, is required for the actual allocation done in the second step (recursive bisectioning). In the original HRP scheme, this hierarchy is found using single-linkage hierarchical clustering of the correlation matrix, which is a static tree-based method. The authors compare the performance of the standard HRP with other static and adaptive tree-based methods, as well as seriation-based methods that do not rely on trees. Seriation is a broader concept allowing reordering of the rows or columns of a matrix to best express similarities between the elements. Each discussed variation leads to a different time series reflecting portfolio performance using a 20-year backtest of a multi-asset futures universe. Unsupervised learningbased on these time-series creates a taxonomy that groups the strategies in high correspondence to the construction hierarchy of the various types of ASRP. Performance analysis of the variations shows that most of the static tree-based alternatives to HRP outperform the single-linkage clustering used in HRP on a risk-adjusted basis. Adaptive tree methods show mixed results, and most generic seriation-based approaches underperform.
+
+
+
+## A Constrained Hierarchical Risk Parity Algorithm with Cluster-based Capital Allocation [pdf](https://www.fmx.nfkatzke.com/Projects/HRP.pdf)
+Johann Pfitzinger, Nico Katzke 
+
+Hierarchical Risk Parity (HRP) is a risk-based portfolio optimisation algorithm, which has been shown to generate diversified portfolios with robust out-of-sample properties without the need for a positive-definite return covariance matrix (Lopez de Prado 2016). The algorithm applies machine learning techniques to identify the underlying hierarchical correlation structure of the portfolio, allowing clusters of similar assets to compete for capital. The resulting allocation is both well-diversified over risk sources and intuitively appealing. This paper proposes a method of fully exploiting the information created by the clustering process, achieving enhanced out-of-sample risk and return characteristics. In addition, a practical approach to calculating HRP weights under box and group constraints is introduced. A comprehensive set of portfolio simulations over 6 equity universes demonstrates the appeal of the algorithm for portfolios consisting of 20 − 200 assets. HRP delivers highly diversified allocations with low volatility, low portfolio turnover and competitive performance metrics.
+
+
+## A Clustering Algorithm for Correlation Quickest Hub Discovery Mixing Time Evolution and Random Matrix Theory
+ [pdf](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4241975)
+ Alejandro Rodriguez Dominguez
+
+We present a geometric version of Quickest Change Detection (QCD) and Quickest Hub Discovery (QHD) tests in correlation structures that allows us to include and combine new information with distance metrics. The topic falls within the scope of sequential, nonparametric, high-dimensional QCD and QHD, from which state-of-the-art settings developed global and local summary statistics from asymptotic Random Matrix Theory (RMT) to detect changes in random matrix law. These settings work only for uncorrelated pre-change variables. With our geometric version of the tests via clustering, we can test the hypothesis that we can improve state-of-the-art settings for QHD, by combining QCD and QHD simultaneously, as well as including information about pre-change time-evolution in correlations. We can work with correlated pre-change variables and test if the time-evolution of correlation improves performance. We prove test consistency and design test hypothesis based on clustering performance. We apply this solution to financial time series correlations. Future developments on this topic are highly relevant in finance for Risk Management, Portfolio Management, and Market Shocks Forecasting which can save billions of dollars for the global economy. We introduce the Diversification Measure Distribution (DMD) for modeling the time-evolution of correlations as a function of individual variables which consists of a Dirichlet-Multinomial distribution from a distance matrix of rolling correlations with a threshold. Finally, we are able to verify all these hypotheses.
+
+
+
+## Hierarchical Sensitivity Parity [pdf](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4110188)
+Alejandro Rodriguez Dominguez
+
+In this work we present a new framework for modelling portfolio dynamics and how to incorporate this information in the portfolio selection process. We define drivers for asset and portfolio dynamics, and their optimal selection. We introduce the new Commonality Principle, which gives a solution for the optimal selection of portfolio drivers as being the common drivers. Asset dynamics are modelled by PDEs and approximated with Neural Networks, and sensitivities of portfolio constituents with respect to portfolio common drivers are obtained via Automatic Adjoint Differentiation (AAD). Information of asset dynamics is incorporated via sensitivities into the portfolio selection process. Portfolio constituents are projected into a hypersurface, from a vector space formed by the returns of common drivers of the portfolio. The commonality principle allows for the necessary geometric link between the hyperplane formed by portfolio constituents in a traditional setup with no exogenous information, and the hypersurface formed by the vector space of common portfolio drivers, so that when portfolio constituents are projected into this hypersurface, the representations of idiosyncratic risks from the hyperplane are kept at most in this new subspace, while systematic risks representations are added via exogenous information as part of this common drivers vector space. We build a sensitivity matrix, which is a similarity matrix of the projections in this hypersurface, and can be used to optimize for diversification on both, idiosyncratic and systematic risks, which is not contemplated on the literature. Finally, we solve the convex optimization problem for optimal diversification by applying a hierarchical clustering to the sensitivity matrix, avoiding quadratic optimizers for the matrix properties, and we reach over-performance in all experiments with respect to all other out-of-sample methods.
+
 ## Asymmetric Autoencoders for Factor-Based Covariance Matrix Estimation [pdf](https://dl.acm.org/doi/pdf/10.1145/3533271.3561715)
 Kevin Huynh, Gregor Lenhard
 

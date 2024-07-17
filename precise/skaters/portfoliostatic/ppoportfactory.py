@@ -22,8 +22,8 @@ from precise.skaters.covarianceutil.covfunctions import affine_shrink
 # Thin wrapper for PyPortfolioOpt
 # For full flexibility refer to the package https://pyportfolioopt.readthedocs.io/en/latest/MeanVariance.html
 
-COV_NOISE = 0.2
-VAR_NOISE = 0.2
+COV_NOISE = 0.0
+VAR_NOISE = 0.0
 
 
 PPO_METHODS = ['max_sharpe','min_volatility','max_quadratic_utility']
@@ -68,7 +68,7 @@ if using_pyportfolioopt:
 
 
     def ppo_portfolio_factory(method:str, cov=None, pre=None, as_dense=False, weight_bounds=None,
-                              risk_free_rate:float=0.02, mu:float=0.04, n_attempts=5, warn=False, throw=False):
+                              risk_free_rate:float=0.02, mu:float=0.04, n_attempts=5, warn=False, throw=False, noise=0.0):
         """
         :param method:
         :param cov:
@@ -89,8 +89,11 @@ if using_pyportfolioopt:
         # Set return style
         as_series = (not as_dense) and isinstance(cov,pd.DataFrame)
 
-        # Jiggle cov
-        jiggled_cov = jiggle_cov(cov=cov)
+        if noise>1e-12:
+            # Jiggle cov
+            jiggled_cov = jiggle_cov(cov=cov, noise=noise)
+        else:
+            jiggled_cov = np.copy(cov)
 
         # Tidy up cov and send to optimizer ... repeatedly with more shrinkage as needed
         shrunk_cov = nearest_pos_def( to_symmetric( jiggled_cov) )
@@ -138,12 +141,12 @@ if using_pyportfolioopt:
             return dense_weights_from_dict(weights, n_dim=n_dim)
 
 
-    def long_from_cov( cov, as_dense=True ):
+    def ppo_vol_long_from_cov(cov, as_dense=True):
         """ Backward compat """
         return ppo_vol_port(cov=cov, as_dense=as_dense)
 
 
-    def long_from_pre(pre, as_dense=True):
+    def ppo_vol_long_from_pre(pre, as_dense=True):
         """ Backward compate """
         return ppo_vol_port(pre=pre, as_dense=as_dense)
 
@@ -171,7 +174,7 @@ if using_pyportfolioopt:
 
     def _ppo_portfolio_allocation(method:str, covs:List, pres:List)->[float]:
         """ Allocate capital between portfolios using either cov or pre matrices
-        :param covs:  List of covariance matrices
+        :param covs:  List of covariancecomparisonutil matrices
         :param pres:  List of precision matrices
         :return: Capital allocation vector
         """
