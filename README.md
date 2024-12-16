@@ -1,4 +1,4 @@
-# precise [docs](https://microprediction.github.io/precise/) ![tests](https://github.com/microprediction/precise/workflows/tests/badge.svg) ![tests-scipy-173](https://github.com/microprediction/precise/workflows/tests-scipy-173/badge.svg) ![tests-sans-ppo](https://github.com/microprediction/precise/workflows/tests-sans-ppo/badge.svg)  ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+# precise [docs](https://microprediction.github.io/precise/) ![tests](https://github.com/microprediction/precise/workflows/tests/badge.svg) ![tests_312](https://github.com/microprediction/precise/workflows/tests_312/badge.svg) ![tests-sans-ppo](https://github.com/microprediction/precise/workflows/tests-sans-ppo/badge.svg)  ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 Contents:
 
@@ -20,7 +20,7 @@ NEW: Some [slides](https://github.com/microprediction/precise/blob/main/academic
 ---
 
 # Usage 
-See the [docs](https://microprediction.github.io/precise/), but briefly:
+See the [docs](https://microprediction.github.io/precise/) but briefly ...
 
 ### Covariance estimation
 Here y is a vector:
@@ -43,6 +43,7 @@ Here y is a vector:
 This package contains lots of "mgr"'s. There is a [LISTING_OF_MANAGERS](https://github.com/microprediction/precise/blob/main/LISTING_OF_MANAGERS.md) with links to respective code. See the [manager documentation](https://microprediction.github.io/precise/managers.html).
 
 # Install 
+Supported for Python 3.11 or earlier
 
     pip install precise 
     
